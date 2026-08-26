@@ -1,0 +1,890 @@
+<title>Lixeiras Ecosoli</title>
+<meta name="description" content="Lixeiras para coleta seletiva em aço inox, plásticas e urbanas para empresas, condomínios, hotéis, clínicas e vias públicas. Padrão CONAMA 275, adequação à PNRS e faturamento facilitado para CNPJ. Pronta entrega em Vinhedo, Valinhos, Campinas e região.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://ecosolicnpj.com.br/lixeiras">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Lixeiras Para Coleta Seletiva | Aço Inox, Plásticas e Urbanas — Ecosoli">
+<meta property="og:description" content="Soluções completas em lixeiras para coleta seletiva e gestão de resíduos. Durabilidade, sofisticação visual e adequação às normas CONAMA e PNRS.">
+<meta property="og:url" content="https://ecosolicnpj.com.br/lixeiras">
+<style>
+/* ═══════════ FONTES (embutidas — sem request externo) ═══════════ */
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url({{ASSET:font_poppins_400}}) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url({{ASSET:font_poppins_500}}) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url({{ASSET:font_poppins_600}}) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url({{ASSET:font_poppins_700}}) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url({{ASSET:font_poppins_800}}) format('woff2')}
+:root {
+  color-scheme:light;
+  /* paleta oficial, lida de ecosolicnpj.com.br/filtros-e-cisternas */
+  --green:#2FA862; --green-700:#1B7440; --green-900:#0E4527; --green-50:#EAF6EF;
+  --yellow:#FFBA2F; --yellow-600:#E8A114; --yellow-50:#FFF6E4;
+  --water:#1D6E8F;
+  --ink:#252525; --ink-2:#2C2C2C; --muted:#6B7280;
+  --line:#E6E9E7; --bg:#FFFFFF; --bg-soft:#F6F8F6;
+  --sombra:0 1px 2px rgba(37,37,37,.04), 0 10px 30px -14px rgba(37,37,37,.16);
+  --sombra-alta:0 2px 4px rgba(37,37,37,.05), 0 22px 48px -18px rgba(27,116,64,.28);
+  --raio:14px;
+  --largura:1180px;
+}
+
+*, *::before, *::after { box-sizing:border-box; }
+body {
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 Poppins, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img { max-width:100%; display:block; }
+h1,h2,h3 { margin:0; font-weight:700; letter-spacing:-.02em; text-wrap:balance; }
+p { margin:0; text-wrap:pretty; }
+a { text-decoration:none; color:inherit; }
+:focus-visible { outline:3px solid var(--yellow-600); outline-offset:3px; border-radius:6px; }
+
+.env { max-width:var(--largura); margin:0 auto; padding-inline:24px; }
+.secao { padding-block:clamp(60px,7.5vw,104px); }
+.secao--soft { background:var(--bg-soft); }
+
+.eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:12.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--green-700);
+}
+.eyebrow::before { content:""; width:24px; height:3px; border-radius:2px; background:var(--yellow); }
+.eyebrow--claro { color:#B9E6CC; }
+
+.cabeca { display:flex; flex-direction:column; gap:16px; max-width:64ch; margin-bottom:48px; }
+.cabeca h2 { font-size:clamp(28px,4.2vw,42px); line-height:1.14; }
+.cabeca h2 .hl { color:var(--green); }
+.cabeca p { color:var(--muted); font-size:17.5px; }
+.cabeca--centro { margin-inline:auto; text-align:center; align-items:center; }
+
+/* ── botões ── */
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  border-radius:11px; font-weight:700; font-size:15px; line-height:1.25;
+  padding:17px 26px; text-align:center; border:2px solid transparent;
+  transition:transform .16s ease, box-shadow .16s ease, background .16s ease, color .16s ease, border-color .16s ease;
+}
+.btn svg { flex:none; }
+.btn:hover { transform:translateY(-2px); }
+.btn:active { transform:translateY(0); }
+.btn--verde { background:var(--green); color:#fff; box-shadow:0 8px 20px -8px rgba(47,168,98,.7); }
+.btn--verde:hover { background:var(--green-700); box-shadow:0 12px 26px -8px rgba(27,116,64,.7); }
+.btn--amarelo { background:var(--yellow); color:var(--ink); box-shadow:0 8px 20px -8px rgba(232,161,20,.75); }
+.btn--amarelo:hover { background:#FFC750; }
+.btn--claro { background:#fff; color:var(--green-700); border-color:var(--line); }
+.btn--claro:hover { border-color:var(--green); color:var(--green-700); }
+.btn--linha {
+  background:var(--green); color:#fff; border-color:var(--green);
+  padding:13px 14px; font-size:12.5px; margin-top:auto;
+  align-self:stretch; width:100%; min-height:58px;
+  box-shadow:0 6px 16px -8px rgba(47,168,98,.75);
+}
+.btn--linha:hover {
+  background:var(--green-700); border-color:var(--green-700); color:#fff;
+  box-shadow:0 10px 22px -8px rgba(27,116,64,.8);
+}
+
+/* ── header ── */
+.topo {
+  position:sticky; top:0; z-index:60; background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px); border-bottom:1px solid var(--line);
+}
+.topo .env { display:flex; align-items:center; gap:14px 26px; padding-block:12px; }
+.marca { display:flex; align-items:center; gap:14px; flex:none; }
+.marca img { height:46px; width:auto; }
+.marca .sep { width:1px; height:30px; background:var(--line); }
+.marca .ecollux { height:26px; opacity:.9; }
+.topo nav { margin-left:auto; display:flex; gap:26px; font-size:15px; font-weight:500; color:var(--ink-2); }
+.topo nav a { position:relative; padding-block:4px; }
+.topo nav a::after {
+  content:""; position:absolute; left:0; right:100%; bottom:0; height:2px;
+  background:var(--green); transition:right .22s ease;
+}
+.topo nav a:hover { color:var(--green-700); }
+.topo nav a:hover::after { right:0; }
+.topo .btn { flex:none; padding:12px 20px; font-size:13.5px; }
+
+/* ── hero ── */
+.hero {
+  position:relative; background:#062718; color:#fff; overflow:hidden;
+  min-height:clamp(580px,74vh,780px); display:flex; align-items:center;
+  padding-block:clamp(72px,8vw,116px);
+}
+.hero > .env { width:100%; }
+.hero-photo { position:absolute; inset:0; z-index:0; overflow:hidden; }
+.hero-photo img { width:100%; height:100%; object-fit:cover; object-position:82% 52%; }
+.hero-veil {
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(97deg, rgba(4,30,17,.90) 0%, rgba(5,38,22,.80) 28%,
+    rgba(6,46,27,.52) 50%, rgba(8,56,33,.22) 72%, rgba(10,64,38,.06) 100%);
+}
+.hero-veil::after {
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(0deg, rgba(4,34,19,.62) 0%, rgba(4,34,19,0) 44%);
+}
+.hero .env { position:relative; z-index:2; }
+.hero-copy { display:flex; flex-direction:column; align-items:flex-start; gap:18px; max-width:60ch; }
+.hero .eyebrow { color:#9FE0BC; }
+.hero .eyebrow::before { background:var(--yellow); }
+.hero h1 { font-size:clamp(34px,5vw,56px); font-weight:800; line-height:1.05; }
+.hero h1 .l2 {
+  display:block; color:var(--yellow); font-size:.58em; font-weight:700;
+  letter-spacing:-.01em; margin-top:14px; line-height:1.22;
+}
+.hero .sub { font-size:clamp(15.5px,1.5vw,17.5px); color:rgba(255,255,255,.88); max-width:58ch; }
+.hero .actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; }
+.hero-provas {
+  display:flex; flex-wrap:wrap; gap:12px 30px; margin-top:16px;
+  padding-top:24px; border-top:1px solid rgba(255,255,255,.2); width:100%;
+}
+.prova { display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600; color:rgba(255,255,255,.94); }
+.prova::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--yellow); flex:none; }
+.microcopy { text-align:center; font-style:italic; font-size:15px; color:var(--muted); margin-top:14px; max-width:60ch; margin-inline:auto; }
+
+/* ── ambientes ── */
+.amb-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
+.amb { margin:0; position:relative; border-radius:var(--raio); overflow:hidden; box-shadow:var(--sombra); }
+.amb img { width:100%; aspect-ratio:3/4; object-fit:cover; transition:transform .5s ease; }
+.amb:hover img { transform:scale(1.05); }
+.amb figcaption {
+  position:absolute; inset:auto 0 0 0; padding:44px 18px 16px; color:#fff;
+  font-weight:600; font-size:15.5px;
+  background:linear-gradient(transparent, rgba(14,69,39,.88));
+}
+
+/* ── portfólio ── */
+.env--largo { max-width:1240px; }
+.grade-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+@media (max-width:979px) { .grade-cards { grid-template-columns:1fr; } }
+.card {
+  display:flex; background:#fff; border:1px solid var(--line);
+  border-radius:var(--raio); overflow:hidden; box-shadow:var(--sombra);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover { transform:translateY(-5px); box-shadow:var(--sombra-alta); border-color:#CFE7D9; }
+.card-media { position:relative; flex:0 0 42%; align-self:stretch; overflow:hidden; min-height:270px; }
+.card-media img {
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; transition:transform .5s ease;
+}
+.card:hover .card-media img { transform:scale(1.04); }
+.card-corpo { flex:1; padding:26px 24px 24px; display:flex; flex-direction:column; gap:12px; }
+.card-corpo h3 { font-size:20px; line-height:1.3; min-height:2.6em; }
+.card-destaque {
+  display:inline-flex; align-self:flex-start; align-items:center; gap:8px;
+  padding:8px 14px; border-radius:999px; font-size:11.5px; font-weight:700; min-height:34px;
+  letter-spacing:.04em; text-transform:uppercase; line-height:1.35;
+}
+.card-destaque::before { content:""; width:7px; height:7px; border-radius:50%; background:currentColor; }
+.card-destaque--premium { background:var(--green-50); color:var(--green-900); }
+.card-destaque--esg { background:#E4F1E9; color:var(--green-700); }
+.card-destaque--urbana { background:#E8EFF3; color:var(--water); }
+.card-destaque--conama { background:var(--yellow-50); color:#8A5D00; }
+.card-texto { font-size:15px; color:var(--muted); flex:1; }
+@media (max-width:559px) {
+  .card { flex-direction:column; }
+  .card-media { flex:none; min-height:0; aspect-ratio:16/10; }
+}
+
+/* ── ESG ── */
+.esg-split {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+  gap:clamp(32px,4.5vw,60px); align-items:center;
+}
+.esg-texto { display:flex; flex-direction:column; gap:18px; }
+.esg-texto h2 { font-size:clamp(27px,3.9vw,38px); line-height:1.16; }
+.esg-texto p { color:var(--muted); }
+.esg-split .foto { border-radius:18px; overflow:hidden; box-shadow:var(--sombra-alta); }
+.esg-split .foto img { width:100%; aspect-ratio:5/4; object-fit:cover; }
+.eyebrow--longo { letter-spacing:.09em; }
+
+/* ── marquee ── */
+.marquee-rotulo { text-align:center; color:var(--muted); font-size:15px; margin:0 auto 24px; max-width:62ch; }
+.marquee { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent); mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent); }
+.marquee-trilho { display:flex; width:max-content; animation:desliza 40s linear infinite; }
+.marquee:hover .marquee-trilho { animation-play-state:paused; }
+.marquee-passada { display:flex; gap:64px; padding-right:64px; align-items:center; }
+.logo-cliente { width:150px; height:58px; display:flex; align-items:center; justify-content:center; }
+.logo-cliente img { max-height:100%; width:auto; object-fit:contain; filter:grayscale(1); opacity:.5; transition:filter .3s ease, opacity .3s ease; }
+.logo-cliente:hover img { filter:none; opacity:1; }
+@keyframes desliza { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+/* ── compra corporativa ── */
+.b2b {
+  position:relative; overflow:hidden; color:#fff;
+  background:
+    radial-gradient(120% 90% at 12% 0%, rgba(47,168,98,.55) 0%, transparent 58%),
+    linear-gradient(150deg, #0B3A22 0%, var(--green-900) 48%, #072A18 100%);
+  background-color:var(--green-900);
+}
+.b2b::before {
+  content:""; position:absolute; inset:0; opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.16) 1px, transparent 1px);
+  background-size:22px 22px;
+  -webkit-mask-image:linear-gradient(160deg,#000 0%,transparent 62%);
+  mask-image:linear-gradient(160deg,#000 0%,transparent 62%);
+}
+.b2b::after {
+  content:""; position:absolute; right:-12%; bottom:-38%; width:640px; height:640px;
+  border-radius:50%; background:radial-gradient(circle, rgba(255,186,47,.20), transparent 66%);
+}
+.b2b .env { position:relative; z-index:1; }
+.b2b h2 { font-size:clamp(28px,4vw,40px); line-height:1.14; }
+.b2b .cabeca p { color:#C6E6D4; }
+.b2b-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(400px,1fr)); gap:20px; }
+.b2b-card {
+  display:flex; gap:20px; align-items:flex-start; padding:26px 26px 26px 24px;
+  border-radius:16px; background:#fff; border:1px solid rgba(255,255,255,.6);
+  box-shadow:0 2px 4px rgba(4,32,18,.14), 0 20px 40px -22px rgba(4,32,18,.7);
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.b2b-card:hover { transform:translateY(-5px); box-shadow:0 4px 8px rgba(4,32,18,.16), 0 30px 56px -24px rgba(4,32,18,.8); }
+.b2b-ic {
+  width:54px; height:54px; border-radius:15px; flex:none;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(145deg, var(--yellow) 0%, var(--yellow-600) 100%);
+  color:var(--green-900); box-shadow:0 6px 14px -6px rgba(232,161,20,.9);
+}
+.b2b-texto { display:flex; flex-direction:column; gap:7px; }
+.b2b-card h3 { font-size:18.5px; line-height:1.3; color:var(--green-900); }
+.b2b-card p { font-size:15px; color:var(--muted); }
+.b2b-fecho { margin-top:44px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:center; text-align:center; }
+@media (max-width:520px) {
+  .b2b-card { flex-direction:column; gap:14px; }
+}
+
+/* ── FAQ ── */
+.faq .env { max-width:880px; }
+.faq-lista { display:flex; flex-direction:column; gap:12px; }
+.faq-item { background:#fff; border:1px solid var(--line); border-radius:var(--raio); overflow:hidden; transition:border-color .2s ease, box-shadow .2s ease; }
+.faq-item:hover { border-color:#CFE7D9; }
+.faq-item[open] { border-color:var(--green); box-shadow:var(--sombra); }
+.faq-item summary {
+  padding:22px 24px; display:flex; gap:18px; align-items:center; cursor:pointer;
+  font-weight:600; font-size:17.5px; line-height:1.4; list-style:none;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary span { flex:1; }
+.faq-item summary::after {
+  content:""; flex:none; width:30px; height:30px; border-radius:50%;
+  background:var(--green-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232FA862' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/17px no-repeat;
+  transition:transform .25s ease, background-color .25s ease;
+}
+.faq-item[open] summary::after { transform:rotate(180deg); }
+.faq-resp { padding:0 62px 24px 24px; }
+.faq-resp p { font-size:16px; color:var(--muted); }
+.faq-item[open] .faq-resp { animation:abre .28s ease; }
+@keyframes abre { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:none; } }
+.faq-fecho {
+  margin-top:36px; padding:28px; border-radius:var(--raio); background:var(--green-50);
+  display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between;
+}
+.faq-fecho p { font-weight:600; font-size:18px; }
+
+/* ── fechamento ── */
+.fecho { background:var(--bg-soft); }
+.fecho .env { max-width:900px; display:flex; flex-direction:column; align-items:center; gap:20px; text-align:center; }
+.fecho h2 { font-size:clamp(28px,4.4vw,42px); line-height:1.12; }
+.fecho h2 .hl { color:var(--green); }
+.fecho .sub { font-size:19px; font-weight:500; color:var(--ink-2); max-width:58ch; }
+.fecho .copy { color:var(--muted); max-width:66ch; }
+.fecho-acoes { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:8px; }
+.assinatura {
+  margin-top:34px; width:100%; padding:30px 28px; border-radius:18px;
+  background:linear-gradient(120deg,var(--green-900),var(--green-700));
+  color:#fff; font-size:clamp(19px,2.7vw,27px); font-weight:700; line-height:1.3;
+  box-shadow:var(--sombra-alta);
+}
+.assinatura .hl { color:var(--yellow); }
+
+/* ── rodapé ── */
+.rodape { background:#fff; border-top:1px solid var(--line); }
+.rodape .env {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:clamp(32px,4.5vw,60px); align-items:center; padding-block:clamp(56px,6.5vw,88px);
+}
+.rodape-card { border:1px solid var(--line); border-radius:18px; padding:14px; background:var(--bg-soft); }
+.rodape-card img.loja { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; }
+.rodape-card .legenda { text-align:center; font-size:13.5px; color:var(--muted); padding:14px 8px 4px; }
+.lockup {
+  margin-top:12px; padding:16px; border-radius:12px; background:#fff; border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;
+}
+.lockup img { height:40px; width:auto; }
+.lockup img.ecollux { height:30px; }
+.lockup .sep { width:1px; height:34px; background:var(--line); }
+.rodape-texto { display:flex; flex-direction:column; gap:18px; }
+.rodape-texto h2 { font-size:clamp(26px,3.6vw,36px); line-height:1.16; color:var(--green-700); }
+.rodape-texto > p { color:var(--muted); max-width:52ch; }
+.dados { display:flex; flex-direction:column; gap:18px; margin-top:4px; }
+.dado { display:flex; gap:14px; align-items:flex-start; }
+.dado .ic { color:var(--green); flex:none; margin-top:2px; }
+.dado b { display:block; font-size:16px; margin-bottom:3px; }
+.dado span { display:block; font-size:15px; color:var(--muted); line-height:1.55; }
+.rodape-acoes { display:flex; flex-wrap:wrap; gap:14px; margin-top:8px; }
+.rodape-base { border-top:1px solid var(--line); background:var(--bg-soft); }
+.rodape-base .env {
+  display:flex; flex-wrap:wrap; gap:8px 28px; padding-block:22px;
+  font-size:14px; color:var(--muted); align-items:center;
+}
+.rodape-base strong { color:var(--ink-2); font-weight:600; }
+
+/* ── WhatsApp flutuante ── */
+.zap {
+  position:fixed; right:20px; bottom:20px; z-index:70;
+  width:62px; height:62px; border-radius:50%; background:#25D366; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 28px -6px rgba(37,211,102,.65);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.zap:hover { transform:scale(1.07); box-shadow:0 14px 34px -6px rgba(37,211,102,.8); }
+.zap::before {
+  content:""; position:absolute; inset:0; border-radius:50%;
+  border:2px solid #25D366; animation:pulso 2.6s ease-out infinite;
+}
+@keyframes pulso { 0% { transform:scale(1); opacity:.75; } 70%,100% { transform:scale(1.5); opacity:0; } }
+
+/* ── reveal on scroll ── */
+.rv { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+.rv.vis { opacity:1; transform:none; }
+
+@media (max-width:900px) {
+  .hero-photo img { object-position:74% 50%; }
+  .hero .actions .btn { width:100%; }
+  .topo nav { display:none; }
+  .topo .env { justify-content:space-between; }
+  .marca img { height:38px; } .marca .ecollux { height:22px; }
+  .faq-item summary { font-size:16px; padding:18px 20px; }
+  .faq-resp { padding:0 20px 20px; }
+  .zap { width:56px; height:56px; right:16px; bottom:16px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+  .rv { opacity:1; transform:none; }
+  .marquee-trilho { animation:none; flex-wrap:wrap; width:auto; justify-content:center; }
+}
+</style>
+
+<header class="topo">
+  <div class="env">
+    <a class="marca" href="#topo" aria-label="Ecosoli — início">
+      <img src="{{ASSET:opt_logo_t}}" alt="Ecosoli — Iluminação LED Solar, LED Elétrico e Sustentabilidade">
+      <span class="sep"></span>
+      <img class="ecollux" src="{{ASSET:opt_logo_ecollux}}" alt="Ecollux Iluminação">
+    </a>
+    <nav>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#portfolio">Linhas</a>
+      <a href="#esg">ESG e PNRS</a>
+      <a href="#b2b">Compra CNPJ</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--verde" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20lixeiras%20para%20coleta%20seletiva%20com%20faturamento%20para%20CNPJ." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>Solicitar orçamento</span></a>
+  </div>
+</header>
+
+<main id="topo">
+
+<section class="hero">
+  <div class="hero-photo">
+    <img src="{{ASSET:hero_bg}}" alt="Quatro lixeiras de aço inox com faixas azul, vermelha, verde e amarela do padrão CONAMA no lobby de um edifício corporativo" fetchpriority="high">
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="env">
+    <div class="hero-copy">
+      <span class="eyebrow">Ecosoli · Gestão de resíduos</span>
+      <h1>Lixeiras Para Coleta Seletiva
+        <span class="l2">Soluções Completas em Lixeiras para Coleta Seletiva e Gestão de Resíduos</span>
+      </h1>
+      <p class="sub">Lixeiras em Aço Inox, Plásticas e Urbanas para condomínios, empresas e vias públicas. O máximo em durabilidade, sofisticação visual e total adequação às normas ambientais (CONAMA e PNRS).</p>
+      <div class="actions">
+        <a class="btn btn--amarelo" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20lixeiras%20para%20coleta%20seletiva%20com%20faturamento%20para%20CNPJ." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>SOLICITAR ORÇAMENTO PARA EMPRESA</span></a>
+      </div>
+      <div class="hero-provas"><span class="prova">+13 Anos de Experiência</span><span class="prova">Faturamento Facilitado para CNPJ</span><span class="prova">Pronta Entrega para Vinhedo, Valinhos e Região</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--soft" id="ambientes">
+  <div class="env">
+    <div class="cabeca cabeca--centro">
+      <span class="eyebrow">Ambientes atendidos</span>
+      <h2>O mesmo acabamento em aço inox, <span class="hl">em cada tipo de ambiente</span></h2>
+      <p>Escritórios, hotéis, clínicas e condomínios: em todos, a identificação de cores da coleta seletiva integrada a um produto que combina com o espaço.</p>
+    </div>
+    <div class="amb-grade">
+        <figure class="amb rv">
+          <img src="{{ASSET:opt_amb_escritorio}}" alt="Estação de coleta seletiva em aço inox com faixas azul, verde e vermelha em escritório corporativo de planta aberta" loading="lazy">
+          <figcaption>Escritórios corporativos</figcaption>
+        </figure>
+        <figure class="amb rv">
+          <img src="{{ASSET:opt_amb_hotel}}" alt="Par de lixeiras de aço inox com faixas azul e amarela no corredor de um hotel de alto padrão" loading="lazy">
+          <figcaption>Hotéis e recepções</figcaption>
+        </figure>
+        <figure class="amb rv">
+          <img src="{{ASSET:opt_amb_clinica}}" alt="Lixeira de aço inox com pedal e faixa verde no corredor de uma clínica médica" loading="lazy">
+          <figcaption>Clínicas e hospitais</figcaption>
+        </figure>
+        <figure class="amb rv">
+          <img src="{{ASSET:opt_amb_condominio}}" alt="Quatro lixeiras de aço inox com faixas azul, vermelha, verde e amarela na área comum de um condomínio residencial" loading="lazy">
+          <figcaption>Condomínios e prédios</figcaption>
+        </figure></div>
+  </div>
+</section>
+
+<section class="secao" id="portfolio">
+  <div class="env env--largo">
+    <div class="cabeca">
+      <span class="eyebrow">Portfólio</span>
+      <h2>A Solução Certa para <span class="hl">Cada Ambiente e Necessidade</span></h2>
+    </div>
+    <div class="grade-cards">
+        <article class="card rv">
+          <div class="card-media"><img src="{{ASSET:opt_p_inox}}" alt="Duas lixeiras de aço inox com tampa basculante e faixas azul e verde ao lado do balcão de mármore da recepção de um hotel" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Lixeiras em Aço Inox</h3>
+            <p class="card-destaque card-destaque--premium">Destaque Premium, Higiene e Design</p>
+            <p class="card-texto">Desenvolvidas para ambientes corporativos de alto padrão, shoppings, hospitais, clínicas e recepções. Unem estética refinada, facilidade de higienização, alta resistência à corrosão e durabilidade incomparável. Disponíveis com tampa basculante, pedal ou divisórias internas para coleta seletiva discreta e elegante.</p>
+            <a class="btn btn--linha" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Vi%20a%20linha%20de%20lixeiras%20em%20a%C3%A7o%20inox%20no%20site%20e%20quero%20conhecer%20os%20modelos%20e%20valores%20para%20a%20minha%20empresa." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>VER LINHA EM AÇO INOX</span></a>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="card-media"><img src="{{ASSET:opt_p_pilhas}}" alt="Coletor de pilhas e baterias em aço inox com visor transparente no hall de elevadores de um edifício corporativo" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Coletores para Baterias, Pilhas e Lixo Eletrônico</h3>
+            <p class="card-destaque card-destaque--esg">Adesão ESG</p>
+            <p class="card-texto">Solução estratégica de nicho para farmácias, supermercados, postos e corporações. Facilite o descarte correto de resíduos perigosos e eleve a pontuação da sua empresa em auditorias ambientais e certificações ESG.</p>
+            <a class="btn btn--linha" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20informa%C3%A7%C3%B5es%20sobre%20os%20coletores%20para%20pilhas%2C%20baterias%20e%20lixo%20eletr%C3%B4nico." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>VER COLETORES DE PILHAS E BATERIAS</span></a>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="card-media"><img src="{{ASSET:opt_p_urbana}}" alt="Lixeira urbana de aço galvanizado com tampa curva instalada em praça pública" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Lixeiras Urbanas e de Grande Volume</h3>
+            <p class="card-destaque card-destaque--urbana">Áreas Abertas</p>
+            <p class="card-texto">Projetadas para prefeituras, parques, praças, vias públicas e áreas externas de grandes condomínios. Estruturas reforçadas contra vandalismo e intempéries climáticas.</p>
+            <a class="btn btn--linha" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20informa%C3%A7%C3%B5es%20sobre%20a%20linha%20de%20lixeiras%20urbanas%20e%20de%20grande%20volume%20para%20%C3%A1rea%20externa." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>VER LINHA URBANA</span></a>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="card-media"><img src="{{ASSET:opt_p_plastica}}" alt="Conjunto de quatro lixeiras plásticas nas cores azul, vermelha, verde e amarela do padrão CONAMA em corredor de escritório" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Lixeiras Plásticas e Conjuntos Múltiplos</h3>
+            <p class="card-destaque card-destaque--conama">Padrão CONAMA</p>
+            <p class="card-texto">Ideais para escolas, condomínios, indústrias e escritórios. Fabricadas em polipropileno de alta densidade, fáceis de lavar e 100% personalizadas nas cores oficiais da Resolução CONAMA 275 para identificação imediata dos resíduos.</p>
+            <a class="btn btn--linha" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20informa%C3%A7%C3%B5es%20sobre%20os%20conjuntos%20de%20lixeiras%20pl%C3%A1sticas%20no%20padr%C3%A3o%20CONAMA." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>VER LINHA PLÁSTICA</span></a>
+          </div>
+        </article></div>
+  </div>
+</section>
+
+<section class="secao secao--soft" id="esg">
+  <div class="env">
+    <div class="esg-split">
+      <div class="esg-texto">
+        <span class="eyebrow eyebrow--longo">ESG e Política Nacional de Resíduos Sólidos (PNRS)</span>
+        <h2>Mais do que Organização: <span class="hl">Ferramentas de Sustentabilidade e ESG</span></h2>
+        <p>Lixeiras de coleta seletiva não são apenas recipientes de descarte; são a face visível do compromisso ambiental da sua organização. A Ecosoli auxilia sua empresa a se adequar à Política Nacional de Resíduos Sólidos (PNRS), promovendo a reciclagem eficiente, o engajamento dos colaboradores e a consolidação de práticas ESG que valorizam a sua marca perante clientes e investidores.</p>
+      </div>
+      <div class="foto rv">
+        <img src="{{ASSET:opt_esg}}" alt="Dois colaboradores descartando resíduos em estação de coleta seletiva de aço inox na copa de um escritório" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <div class="env" style="padding-top:clamp(48px,6vw,72px)">
+    <p class="marquee-rotulo">Empresas, indústrias e empreendimentos que já transformaram sua gestão de resíduos com a Ecosoli:</p>
+  </div>
+  <div class="marquee">
+    <div class="marquee-trilho">
+      <div class="marquee-passada"><div class="logo-cliente"><img src="{{ASSET:opt_logo_nestle}}" alt="Nestlé" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_petrobras}}" alt="Petrobras" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_sesc}}" alt="Sesc" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_brf}}" alt="BRF" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_klabin}}" alt="Klabin" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_karcher}}" alt="Kärcher" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_unilever}}" alt="Unilever" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_extra}}" alt="Extra" loading="lazy"></div></div>
+      <div class="marquee-passada" aria-hidden="true"><div class="logo-cliente"><img src="{{ASSET:opt_logo_nestle}}" alt="Nestlé" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_petrobras}}" alt="Petrobras" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_sesc}}" alt="Sesc" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_brf}}" alt="BRF" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_klabin}}" alt="Klabin" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_karcher}}" alt="Kärcher" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_unilever}}" alt="Unilever" loading="lazy"></div><div class="logo-cliente"><img src="{{ASSET:opt_logo_extra}}" alt="Extra" loading="lazy"></div></div>
+    </div>
+  </div>
+  <div class="env" style="display:flex;justify-content:center;padding-top:36px">
+    <a class="btn btn--verde" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20adequar%20o%20meu%20neg%C3%B3cio%20ao%20ESG%20e%20%C3%A0%20PNRS%20com%20as%20lixeiras%20da%20Ecosoli." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>FAÇA COMO GRANDES EMPRESAS: ADEQUE SEU NEGÓCIO AO ESG</span></a>
+  </div>
+  <div class="env"><p class="microcopy">Fale com nossos consultores e descubra a solução ideal para a coleta seletiva do seu condomínio ou empresa.</p></div>
+</section>
+
+<section class="secao b2b" id="b2b">
+  <div class="env">
+    <div class="cabeca cabeca--centro">
+      <span class="eyebrow eyebrow--claro">Compra corporativa</span>
+      <h2>Comprando para a sua Empresa ou Condomínio?</h2>
+      <p>Facilitamos o processo de compras do seu departamento de Suprimentos, MRO ou Síndico.</p>
+    </div>
+    <div class="b2b-grade">
+        <div class="b2b-card rv">
+          <span class="b2b-ic"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 5.6M17.5 20a5.6 5.6 0 0 0-2-4.3"/></svg></span>
+          <div class="b2b-texto">
+            <h3>Atendimento Consultivo Especializado</h3>
+            <p>Auxiliamos na escolha da quantidade e modelo ideal para o fluxo de pessoas do seu espaço.</p>
+          </div>
+        </div>
+        <div class="b2b-card rv">
+          <span class="b2b-ic"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div class="b2b-texto">
+            <h3>Adequação Legal</h3>
+            <p>Garantimos que sua empresa atenda às exigências da Política Nacional de Resíduos Sólidos (PNRS) e normas sanitárias.</p>
+          </div>
+        </div>
+        <div class="b2b-card rv">
+          <span class="b2b-ic"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+          <div class="b2b-texto">
+            <h3>Faturamento Facilitado para CNPJ</h3>
+            <p>Condições especiais de pagamento, emissão rápida de Nota Fiscal e faturamento faturado para empresas cadastradas.</p>
+          </div>
+        </div>
+        <div class="b2b-card rv">
+          <span class="b2b-ic"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></span>
+          <div class="b2b-texto">
+            <h3>Agilidade Logística Local</h3>
+            <p>Suporte presencial e entrega ágil para Vinhedo, Valinhos, Campinas e região.</p>
+          </div>
+        </div></div>
+    <div class="b2b-fecho">
+      <a class="btn btn--amarelo" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20falar%20com%20um%20especialista%20da%20Ecosoli%20sobre%20lixeiras%20para%20a%20minha%20empresa%20ou%20condom%C3%ADnio." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>FALE COM NOSSO TIME DE ESPECIALISTAS NO WHATSAPP</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="secao faq" id="faq">
+  <div class="env">
+    <div class="cabeca cabeca--centro">
+      <span class="eyebrow">FAQ</span>
+      <h2>Perguntas Frequentes de <span class="hl">Compras e Licitações</span></h2>
+    </div>
+    <div class="faq-lista">
+        <details class="faq-item">
+          <summary><span>Qual a vantagem do Aço Inox em relação ao plástico para empresas?</span></summary>
+          <div class="faq-resp"><p>O Aço Inox oferece altíssima durabilidade, não absorve odores, é extremamente fácil de sanitizar (essencial para hospitais e praças de alimentação) e entrega uma apresentação estética muito superior em recepções e escritórios corporativos.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>As lixeiras seguem o padrão oficial de cores da coleta seletiva?</span></summary>
+          <div class="faq-resp"><p>Sim. Nossos conjuntos e adesivagens seguem rigorosamente o padrão estabelecido pelo CONAMA (Azul para papel, Vermelho para plástico, Verde para vidro, Amarelo para metal, etc.).</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Como funciona o faturamento para CNPJ?</span></summary>
+          <div class="faq-resp"><p>Oferecemos faturamento via boleto bancário para empresas, condomínios e órgãos públicos mediante análise cadastral rápida. Basta enviar os dados da sua empresa no momento da cotação.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Vocês fornecem documentação técnica e Nota Fiscal para comprovação ambiental?</span></summary>
+          <div class="faq-resp"><p>Sim. Todos os nossos produtos acompanham Nota Fiscal detalhada e especificações técnicas necessárias para auditorias de certificação ISO 14001 ou programas internos de ESG.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>As lixeiras podem ser personalizadas com a identificação de cada resíduo?</span></summary>
+          <div class="faq-resp"><p>Sim. Trabalhamos com adesivagem e identificação no padrão CONAMA, para que colaboradores e visitantes reconheçam imediatamente onde descartar cada tipo de material. Fale com a nossa equipe sobre as possibilidades de personalização para o seu projeto.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Como defino a quantidade e o tamanho ideais para o meu espaço?</span></summary>
+          <div class="faq-resp"><p>Esse é justamente o nosso atendimento consultivo: avaliamos o fluxo de pessoas, o tipo de ambiente e o volume de resíduos gerado para indicar o modelo e a quantidade certos — sem que você compre mais nem menos do que precisa.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Vocês atendem condomínios, indústrias e órgãos públicos?</span></summary>
+          <div class="faq-resp"><p>Sim. Atendemos departamentos de Suprimentos e MRO, síndicos e administradoras, indústrias e órgãos públicos, com o processo de compra e a documentação adequados a cada perfil.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Qual é a área de entrega?</span></summary>
+          <div class="faq-resp"><p>Temos pronta entrega e suporte presencial para Vinhedo, Valinhos, Campinas e região. Para outras localidades, consulte a nossa equipe no WhatsApp para verificar prazo e condições.</p></div>
+        </details></div>
+    <div class="faq-fecho">
+      <p>Ainda tem alguma dúvida específica?</p>
+      <a class="btn btn--verde" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20t%C3%A9cnica%20sobre%20as%20lixeiras%20da%20Ecosoli." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>FALAR COM NOSSA EQUIPE TÉCNICA VIA WHATSAPP</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="secao fecho">
+  <div class="env">
+    <h2>Pronto para economizar e adequar sua empresa às <span class="hl">melhores práticas ambientais?</span></h2>
+    <p class="sub">Descubra como nossas soluções em lixeiras de aço inox e coleta seletiva podem transformar o ambiente da sua organização.</p>
+    <p class="copy">Seja você um comprador corporativo buscando durabilidade para a indústria, um síndico renovando o condomínio ou um gestor hospitalar exigindo máxima higienização, a Ecosoli tem o portfólio completo e a pronta entrega que você precisa.</p>
+    <div class="fecho-acoes">
+      <a class="btn btn--verde" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20lixeiras%20para%20coleta%20seletiva%20com%20faturamento%20para%20CNPJ." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>SOLICITAR ORÇAMENTO CNPJ</span></a>
+      <a class="btn btn--claro" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20saber%20qual%20linha%20de%20lixeiras%20%C3%A9%20a%20ideal%20para%20o%20meu%20tipo%20de%20ambiente." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>FALAR COM CONSULTOR NO WHATSAPP</span></a>
+    </div>
+    <p class="assinatura">Mais durabilidade, mais sofisticação,<br><span class="hl">mais ECOSOLI.</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="env">
+    <div class="rodape-card">
+      <img class="loja" src="{{ASSET:opt_fachada}}" alt="Fachada da loja Ecosoli na Avenida Benedito Storani, 921, em Vinhedo/SP">
+      <p class="legenda">Nossa unidade na Av. Benedito Storani, 921 — Vinhedo/SP</p>
+      <div class="lockup">
+        <img src="{{ASSET:opt_logo_t}}" alt="Ecosoli">
+        <span class="sep"></span>
+        <img class="ecollux" src="{{ASSET:opt_logo_ecollux}}" alt="Ecollux Iluminação">
+      </div>
+    </div>
+    <div class="rodape-texto">
+      <span class="eyebrow">Ecosoli &amp; Ecollux — Unidade Vinhedo/SP</span>
+      <h2>Visite nosso Showroom de Soluções Sustentáveis</h2>
+      <p>Venha testar a qualidade do nosso Aço Inox, verificar o acabamento dos coletores e tomar um café com nossa equipe técnica.</p>
+      <div class="dados">
+        <div class="dado">
+          <span class="ic"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <div>
+            <b>Avenida Benedito Storani, nº 921 — Andar Térreo</b>
+            <span>Residencial Aquário · CEP 13284-002 · Vinhedo/SP</span>
+            <span>Atendimento para Vinhedo, Valinhos e região</span>
+          </div>
+        </div>
+        <div class="dado">
+          <span class="ic"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.2 2"/></svg></span>
+          <div><b>Horário de atendimento</b><span>Segunda a Sábado, das 09h às 18h</span></div>
+        </div>
+        <div class="dado">
+          <span class="ic"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h3l1.6 4-2 1.3a12 12 0 0 0 6.1 6.1l1.3-2 4 1.6v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></svg></span>
+          <div><b>Contato</b><span>(19) 92003-3125 · atendimento@ecosoli.com.br</span></div>
+        </div>
+      </div>
+      <div class="rodape-acoes">
+        <a class="btn btn--verde" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20combinar%20uma%20visita%20ao%20showroom%20da%20Ecosoli%20em%20Vinhedo." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>Combinar uma visita</span></a>
+        <a class="btn btn--claro" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20lixeiras%20para%20coleta%20seletiva%20com%20faturamento%20para%20CNPJ." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>Solicitar orçamento</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="rodape-base">
+    <div class="env">
+      <span><strong>CNPJ:</strong> 18.067.730/0001-40</span>
+      <span><strong>Ecosoli 2026</strong> — Todos os direitos reservados.</span>
+      <span>Referência em eficiência hídrica e energia sustentável.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="zap" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20lixeiras%20para%20coleta%20seletiva%20e%20quero%20falar%20com%20a%20Ecosoli." target="_blank" rel="noopener" aria-label="Falar com a Ecosoli no WhatsApp">
+  <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.84-.85 2.05s.87 2.37.99 2.53c.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.17-.47-.29Z"/></svg>
+</a>
+
+<script>
+(function () {
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* revelação ao rolar */
+  var alvos = document.querySelectorAll('.rv');
+  if (reduz || !('IntersectionObserver' in window)) {
+    alvos.forEach(function (e) { e.classList.add('vis'); });
+  } else {
+    var obs = new IntersectionObserver(function (ents) {
+      ents.forEach(function (ent, i) {
+        if (!ent.isIntersecting) return;
+        var el = ent.target;
+        setTimeout(function () { el.classList.add('vis'); }, (i % 4) * 90);
+        obs.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+    alvos.forEach(function (e) { obs.observe(e); });
+  }
+
+  /* acordeão: abre um por vez */
+  var itens = document.querySelectorAll('.faq-item');
+  itens.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open) return;
+      itens.forEach(function (o) { if (o !== d) o.open = false; });
+    });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://ecosolicnpj.com.br/lixeiras#ecosoli",
+  "name": "Ecosoli",
+  "url": "https://ecosolicnpj.com.br/lixeiras",
+  "description": "Lixeiras para coleta seletiva em aço inox, plásticas e urbanas para empresas, condomínios e vias públicas.",
+  "telephone": "+5519920033125",
+  "email": "atendimento@ecosoli.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Benedito Storani, 921 — Andar Térreo",
+    "addressLocality": "Vinhedo",
+    "addressRegion": "SP",
+    "postalCode": "13284-002",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Vinhedo"
+    },
+    {
+      "@type": "City",
+      "name": "Valinhos"
+    },
+    {
+      "@type": "City",
+      "name": "Campinas"
+    }
+  ],
+  "vatID": "18.067.730/0001-40"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://ecosolicnpj.com.br/lixeiras#ecollux",
+  "name": "Ecollux Iluminação",
+  "vatID": "65.123.056/0001-89"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://ecosolicnpj.com.br/lixeiras#servico",
+  "name": "Lixeiras Para Coleta Seletiva",
+  "provider": {
+    "@id": "https://ecosolicnpj.com.br/lixeiras#ecosoli"
+  },
+  "serviceType": "Fornecimento de lixeiras para coleta seletiva e gestão de resíduos",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Vinhedo, Valinhos, Campinas e região"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Linhas de lixeiras",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Lixeiras em Aço Inox"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Coletores para Baterias, Pilhas e Lixo Eletrônico"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Lixeiras Urbanas e de Grande Volume"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Lixeiras Plásticas e Conjuntos Múltiplos"
+        }
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://ecosolicnpj.com.br/lixeiras#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual a vantagem do Aço Inox em relação ao plástico para empresas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Aço Inox oferece altíssima durabilidade, não absorve odores, é extremamente fácil de sanitizar (essencial para hospitais e praças de alimentação) e entrega uma apresentação estética muito superior em recepções e escritórios corporativos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "As lixeiras seguem o padrão oficial de cores da coleta seletiva?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Nossos conjuntos e adesivagens seguem rigorosamente o padrão estabelecido pelo CONAMA (Azul para papel, Vermelho para plástico, Verde para vidro, Amarelo para metal, etc.)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona o faturamento para CNPJ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oferecemos faturamento via boleto bancário para empresas, condomínios e órgãos públicos mediante análise cadastral rápida. Basta enviar os dados da sua empresa no momento da cotação."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês fornecem documentação técnica e Nota Fiscal para comprovação ambiental?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Todos os nossos produtos acompanham Nota Fiscal detalhada e especificações técnicas necessárias para auditorias de certificação ISO 14001 ou programas internos de ESG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "As lixeiras podem ser personalizadas com a identificação de cada resíduo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Trabalhamos com adesivagem e identificação no padrão CONAMA, para que colaboradores e visitantes reconheçam imediatamente onde descartar cada tipo de material. Fale com a nossa equipe sobre as possibilidades de personalização para o seu projeto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como defino a quantidade e o tamanho ideais para o meu espaço?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Esse é justamente o nosso atendimento consultivo: avaliamos o fluxo de pessoas, o tipo de ambiente e o volume de resíduos gerado para indicar o modelo e a quantidade certos — sem que você compre mais nem menos do que precisa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês atendem condomínios, indústrias e órgãos públicos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Atendemos departamentos de Suprimentos e MRO, síndicos e administradoras, indústrias e órgãos públicos, com o processo de compra e a documentação adequados a cada perfil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual é a área de entrega?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Temos pronta entrega e suporte presencial para Vinhedo, Valinhos, Campinas e região. Para outras localidades, consulte a nossa equipe no WhatsApp para verificar prazo e condições."
+      }
+    }
+  ]
+}
+</script>

@@ -1,0 +1,8 @@
+# artefato intermediário: fragmento gerado pelo build.py e consumido pelo standalone.py
+ecosoli-lixeiras.html
+
+# rascunhos e sistema
+_*.html
+shots/
+.DS_Store
+__pycache__/
