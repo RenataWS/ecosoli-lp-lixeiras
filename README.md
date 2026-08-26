@@ -82,6 +82,14 @@ gh run watch -R RenataWS/ecosoli-lp-lixeiras
 O workflow sobe apenas `index.html` e o conteúdo de `public/` por FTP, usando os
 secrets `FTP_SERVER`, `FTP_USERNAME` e `FTP_PASSWORD`.
 
+Depois de publicar, **confira a página com uma query string** —
+`…/lixeiras/?v=1`. O site tem cache de página em disco com validade de 8 horas
+(`cache-control: max-age=28800`), e ele guarda até resposta de 404: hoje
+`/lixeiras/` devolve a página "não encontrada" do WordPress com status 200,
+servida do cache. O arquivo real que o deploy sobe passa na frente do WordPress,
+mas se a versão com `?v=1` mostrar a landing page e a versão sem mostrar o 404,
+é só cache velho — purgar pelo painel do WordPress ou esperar as 8 horas.
+
 **A conta FTP deste repositório não é a da LP de filtros e cisternas.** Lá o
 home do usuário FTP já está dentro de `public_html/filtros-e-cisternas/`, e é
 por isso que o `server-dir` padrão é `./`. Reaproveitar aqueles secrets aqui
