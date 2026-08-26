@@ -12,14 +12,22 @@ Repositório irmão: [`ecosoli-lp-filtros-cisternas`](https://github.com/RenataW
 
 ## O entregável
 
-**`index.html`** — documento único, ~1,2 MB, pronto para subir em qualquer host.
+**`index.html`** — documento único, ~1,3 MB, pronto para subir em qualquer host.
 
 Imagens e fontes vão embutidas em base64, então a página **não faz nenhuma
 requisição externa**: funciona assim que o arquivo chega no servidor, sem
 depender de CDN, de configuração de MIME type ou de plugin.
 
-Para publicar no HostGator, basta colocar o `index.html` na pasta do
-subdiretório correspondente.
+A única exceção é **`public/og-lixeiras.jpg`**, a imagem que aparece quando
+alguém compartilha o link. Ela precisa ser arquivo de verdade: WhatsApp,
+Facebook e LinkedIn só leem `og:image` com URL absoluta e ignoram data URI. O
+`deploy.yml` sobe o conteúdo de `public/` ao lado do `index.html`, então a
+imagem responde em `…/lixeiras/og-lixeiras.jpg`. Mudar o nome do arquivo ou o
+diretório de destino quebra o preview — e as redes cacheiam o resultado, então
+o estrago não se corrige sozinho.
+
+Para publicar no HostGator, basta colocar o `index.html` e a imagem de
+compartilhamento na pasta do subdiretório correspondente.
 
 ---
 
@@ -43,11 +51,42 @@ python3 standalone.py
 `build.py` resolve cada `{{ASSET:nome}}` procurando `assets/nome.{webp,woff2,png,jpg}`
 e falha se algum estiver faltando.
 
+Se a foto do hero ou o texto da peça de compartilhamento mudarem, regerar a
+imagem também:
+
+```bash
+python3 og.py    # → public/og-lixeiras.jpg
+```
+
+`og.py` monta a peça em HTML (mesma foto, fonte e paleta do hero), fotografa com
+o Chrome headless e salva em 1200x630 — o formato que as redes recortam sem
+cortar nada.
+
 `standalone.py` separa `<head>` de `<body>` e monta o documento com `<!DOCTYPE>`,
 `<html lang="pt-BR">` e as metatags no lugar certo. O template é um fragmento,
 então essa etapa é obrigatória — sem ela as metatags de SEO caem dentro do
 `<body>` e são ignoradas pelos buscadores. Ao final ele confere se nada se perdeu
 no caminho, inclusive a linha de prova social do briefing.
+
+---
+
+## Publicar
+
+O deploy é manual, pelo GitHub Actions:
+
+```bash
+gh workflow run deploy.yml -R RenataWS/ecosoli-lp-lixeiras -f server-dir=./
+gh run watch -R RenataWS/ecosoli-lp-lixeiras
+```
+
+O workflow sobe apenas `index.html` e o conteúdo de `public/` por FTP, usando os
+secrets `FTP_SERVER`, `FTP_USERNAME` e `FTP_PASSWORD`.
+
+**A conta FTP deste repositório não é a da LP de filtros e cisternas.** Lá o
+home do usuário FTP já está dentro de `public_html/filtros-e-cisternas/`, e é
+por isso que o `server-dir` padrão é `./`. Reaproveitar aqueles secrets aqui
+sobrescreveria a outra landing page. Este repositório precisa de uma conta FTP
+própria, com diretório `public_html/lixeiras`.
 
 ---
 

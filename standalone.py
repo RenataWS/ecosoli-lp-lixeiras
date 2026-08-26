@@ -69,7 +69,8 @@ def main():
     # Verificação: nada pode ter se perdido no caminho.
     perdeu = []
     for marca in ("Lixeiras Para Coleta Seletiva", "SOLICITAR ORÇAMENTO PARA EMPRESA",
-                  "+13 Anos de Experiência", "FAQPage", "wa.me/", "@font-face"):
+                  "+13 Anos de Experiência", "FAQPage", "wa.me/", "@font-face",
+                  "og:image", 'rel="icon"'):
         if doc.count(marca) < frag.count(marca):
             perdeu.append(marca)
     if perdeu:

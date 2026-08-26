@@ -1,0 +1,37 @@
+name: Deploy HTML para HostGator
+
+on:
+  workflow_dispatch:
+    inputs:
+      server-dir:
+        description: 'Pasta de destino no FTP (relativa ao home do usuário, com barra no fim)'
+        required: true
+        default: './'
+
+jobs:
+  deploy:
+    name: Enviar index.html para HostGator
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      # O index.html é standalone (imagens e fontes em base64). A única coisa que
+      # sobe junto é public/, com a imagem de compartilhamento: og:image exige URL
+      # absoluta, então ela não pode ir embutida como data URI. Isolar numa pasta
+      # evita mandar assets/, magnific/ e os scripts de build para o servidor.
+      - name: Isolar o entregável
+        run: |
+          mkdir dist
+          cp index.html dist/
+          cp public/* dist/
+
+      - name: Enviar arquivos via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ${{ inputs.server-dir }}

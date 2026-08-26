@@ -3,6 +3,8 @@ ecosoli-lixeiras.html
 
 # rascunhos e sistema
 _*.html
+_*.png
 shots/
 .DS_Store
 __pycache__/
+.gstack/
