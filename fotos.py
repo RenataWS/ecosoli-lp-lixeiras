@@ -354,12 +354,27 @@ CENAS = {
              "reflexo": {"opac": .10}},
         ],
     },
+    # A peça daqui é a hospitalar — cilíndrica, com pedal, alça e rodízios —, a
+    # pedido da cliente: é a que hospital e clínica compram, porque abre sem
+    # contato e roda de quarto em quarto. São duas na cena, a segunda mais ao
+    # fundo do corredor, que é como elas andam de verdade e é o que dá
+    # profundidade ao cartão — uma peça só deixava o terço direito vazio.
+    #
+    # O `thresh` sobe para 100, ao contrário do resto: nesta foto o vão entre os
+    # rodízios é sombra clara de estúdio, não branco puro, e com tolerância
+    # baixa o preenchimento parava ali e a peça vinha com uma placa branca sob a
+    # base. O corpo é inox escovado, bem mais escuro, e a essa tolerância ainda
+    # não vaza para dentro.
     "opt_amb_clinica": {
         "tam": (1000, 1325),
         "ambiente": {"foto": "amb_clinica.jpg", "apagar": [(.28, .68, .46, .94)]},
         "luz": {"quente": 1.0, "frio": 1.01, "brilho": 1.0, "lado": 0.14},
         "pecas": [
-            {"arq": "pedal_verde_vidro", "altura": .385, "x": .470, "base": .888,
+            {"arq": "hospitalar_pedal_rodizio", "thresh": 100, "altura": .310, "x": .690, "base": .750,
+             "desfoque": .45, "reflexo": {"opac": .13},
+             "oclusao_ops": {"opac": .42},
+             "sombra_ops": {"opac": .24, "alonga": 1.8, "inclina": -1.1}},
+            {"arq": "hospitalar_pedal_rodizio", "thresh": 100, "altura": .470, "x": .425, "base": .888,
              "reflexo": {"opac": .18},
              "oclusao_ops": {"opac": .58},
              "sombra_ops": {"opac": .34, "alonga": 2.0, "inclina": -1.2}},

@@ -187,7 +187,10 @@ Três coisas do `fotos.py` valem saber antes de mexer:
   luminância, que comeria o corpo branco das lixeiras pintadas e os reflexos do
   inox polido. A tolerância é por peça (`thresh`): nas lixeiras de corpo branco
   encostando em fundo branco ela precisa cair para 12, senão o preenchimento
-  vaza para dentro e arranca um pedaço do produto.
+  vaza para dentro e arranca um pedaço do produto. E precisa subir quando a peça
+  tem vão por baixo — a hospitalar de rodízios só sai limpa em 100, porque o que
+  há entre as rodas é sombra clara de estúdio, não branco puro, e com tolerância
+  baixa ela vem com uma placa branca sob a base.
 - **Apagar a lixeira gerada é interpolação horizontal**, linha a linha, entre o
   que sobrou dos dois lados. Preserva a estratificação da cena — linha do piso,
   laje, horizonte — e perde os detalhes verticais. Por isso as caixas de
