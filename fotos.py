@@ -4,17 +4,22 @@
     python3 fotos.py            # gera as cenas
     python3 fotos.py --preview  # grava também um contato em /tmp para conferir
 
-São dois tipos de cena.
+São três tipos de cena.
 
 **Cena de estúdio** (os cards do portfólio): fundo claro montado aqui mesmo, com
 as peças recortadas do fundo branco do acervo.
 
-**Cena de ambiente** (hero e os quatro cartões de "Ambientes atendidos"): parte
+**Cena de ambiente** (hero e três dos quatro cartões de "Ambientes atendidos"): parte
 da geração de IA que já existia em `magnific/` — o lobby, o escritório, o
 corredor de hotel, a clínica, o condomínio — só que a lixeira genérica que a IA
 desenhou é apagada e no lugar entra a peça real do catálogo, com a luz, a sombra
 e o reflexo daquela cena. O ambiente continua ilustração; o produto passa a ser
 o que a Ecosoli vende de fato.
+
+**Cena com piso montado** (o cartão de condomínio): a faixa alta de uma dessas
+gerações entra inteira, porque ali não há lixeira desenhada nenhuma, e o chão da
+frente é construído a partir da cor do piso da própria foto. É a saída para peça
+larga demais para caber numa cena já ocupada — ver as notas em CENAS.
 
 Apagar o objeto é interpolação horizontal linha a linha entre o que sobrou dos
 dois lados. Preserva a estratificação da cena — linha do piso, laje, horizonte —
@@ -260,7 +265,7 @@ def montar(cena):
 
     tela = fundo.convert("RGBA")
     luz = cena.get("luz", {})
-    for item in cena["pecas"]:
+    for item in cena.get("pecas", []):
         colocar(tela, item, luz)
 
     out = tela.convert("RGB").resize((W, H), Image.LANCZOS)
@@ -360,20 +365,16 @@ CENAS = {
              "sombra_ops": {"opac": .34, "alonga": 2.0, "inclina": -1.2}},
         ],
     },
+    # Esta é a única das cinco que não monta nada: chega pronta do cliente, com o
+    # conjunto na barra de suporte — o que mais vende para condomínio — já na
+    # cena. Três montagens foram tentadas antes e reprovadas; o conjunto tem
+    # 1,85 m de largura por 0,96 m de altura e, na escala da cena que existia
+    # aqui, não cabia sem ficar plantado no meio da circulação. A foto nova
+    # resolve na origem. Só o enquadramento passa por aqui: 1089x1444 é o mesmo
+    # 3:4 do cartão, então a redução não corta nada.
     "opt_amb_condominio": {
         "tam": (1000, 1325),
-        "ambiente": {"foto": "amb_condominio.jpg", "apagar": [(.13, .88, .49, .96)]},
-        "luz": {"quente": 1.06, "frio": 0.93, "brilho": 0.94, "lado": 0.24},
-        "pecas": [
-            {"arq": "conama_azul_papel",        "altura": .320, "x": .240, "base": .845,
-             "desfoque": .25, "reflexo": {"opac": .09}},
-            {"arq": "conama_vermelho_plastico", "altura": .335, "x": .385, "base": .875,
-             "desfoque": .15, "reflexo": {"opac": .09}},
-            {"arq": "conama_verde_vidro",       "altura": .350, "x": .545, "base": .898,
-             "desfoque": .08, "reflexo": {"opac": .10}},
-            {"arq": "conama_amarelo_metal",     "altura": .385, "x": .735, "base": .928,
-             "reflexo": {"opac": .10}},
-        ],
+        "ambiente": {"foto": "amb_condominio_conjunto.png"},
     },
 
     # ── cards do portfólio: estúdio ──

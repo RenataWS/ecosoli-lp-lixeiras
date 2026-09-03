@@ -58,8 +58,9 @@ python3 standalone.py
 `build.py` resolve cada `{{ASSET:nome}}` procurando `assets/nome.{webp,woff2,png,jpg}`
 e falha se algum estiver faltando.
 
-As nove fotos com produto — as duas do hero, os quatro cartões de ambiente e os
-três cards de portfólio — não se editam à mão: são montadas por `fotos.py`, que
+As oito fotos com produto montadas aqui — as duas do hero, três dos quatro
+cartões de ambiente e os três cards de portfólio — não se editam à mão: quem as
+monta é o `fotos.py`, que
 recorta as peças de `produtos/` e as compõe na cena. Mexer no enquadramento é
 mexer no dicionário `CENAS`, e depois:
 
@@ -150,10 +151,27 @@ genérica junto; o `fotos.py` apaga essa lixeira e põe no lugar a peça real,
 recortada do fundo branco do estúdio e reacesa com a luz, a sombra e o reflexo
 daquela cena. Ambiente ilustrado, produto verdadeiro.
 
-Duas exceções seguem inteiramente geradas: a foto da lâmina de **ESG**, em que a
-pessoa interage com a lixeira e trocar a peça exigiria refazer a mão; e o card da
-**linha plástica**, porque o acervo é todo de aço inox e não existe foto dessa
-linha — pôr inox ali seria prometer polipropileno e mostrar outra coisa. A
+**O cartão de condomínio é o único que não se monta aqui.** Ele mostra o
+conjunto na barra de suporte — as cinco lixeiras (metal, papel, vidro, plástico
+e orgânico) presas à estrutura, que é o que mais vende para condomínio —, e a
+imagem chega pronta do cliente, em `magnific/amb_condominio_conjunto.png`. O
+`fotos.py` só reduz para 1000x1325; o original é 1089x1444, o mesmo 3:4 do
+cartão, então nada se corta.
+
+Vale saber por que essa exceção existe, para não tentar de novo: o conjunto tem
+1,85 m de largura por 0,96 m de altura. Na escala da cena de condomínio que havia
+aqui, isso dá 93% da largura do quadro — ele só cabia plantado no meio da
+circulação, e encolher para tirá-lo de lá deixava à mostra o remendo de onde
+saíram as lixeiras geradas. Três montagens foram tentadas e reprovadas pelo
+cliente antes de a foto nova resolver o problema na origem. Qualquer peça larga
+assim vai esbarrar no mesmo limite.
+
+Três imagens seguem inteiramente geradas, produto incluído: a foto da lâmina de
+**ESG**, em que a pessoa interage com a lixeira e trocar a peça exigiria refazer
+a mão; o card da **linha plástica**, porque o acervo é todo de aço inox e não
+existe foto dessa linha — pôr inox ali seria prometer polipropileno e mostrar
+outra coisa; e o **cartão de condomínio**, cuja imagem veio pronta do cliente com
+o conjunto já na cena. A
 fachada (`opt_fachada.webp`) é foto real, reaproveitada do repositório de filtros
 e cisternas.
 
@@ -213,7 +231,9 @@ Sete lâminas, na ordem do briefing, mais uma acrescentada a pedido:
 
 1. Hero
 2. **Ambientes atendidos** — escritório, hotel, clínica e condomínio *(fora do
-   briefing; acrescentada para reforçar a conexão com o ambiente corporativo)*
+   briefing; acrescentada para reforçar a conexão com o ambiente corporativo)*.
+   O de condomínio mostra o conjunto na barra de suporte, o carro-chefe da linha
+   para esse público, em imagem fornecida pelo cliente
 3. Categorias do portfólio — 4 linhas de produto
 4. Prova social, ESG e PNRS — carrossel infinito de logomarcas de clientes
 5. Foco B2B e condomínios
@@ -241,7 +261,9 @@ Dados estruturados em JSON-LD no fim do documento: `LocalBusiness` (Ecosoli),
   porque o acervo não tem nenhuma foto de peça instalada em ambiente corporativo
   com qualidade de uso: as poucas que existem são de celular e com marca d'água.
   Se o cliente fotografar instalações, as fotos entram no lugar das cenas em
-  `assets/hero_bg*.webp`, `assets/opt_amb_*.webp` e `assets/opt_esg.webp`.
+  `assets/hero_bg*.webp`, `assets/opt_amb_*.webp` e `assets/opt_esg.webp`. O
+  cartão de condomínio já anda por esse caminho: a imagem dele vem pronta do
+  cliente, e substituí-la é trocar o arquivo em `magnific/` e rodar o `fotos.py`.
 - **Linha plástica fora do catálogo** — o PDF não traz essa linha, e o acervo de
   fotos também não: das 337 imagens, nenhuma é de peça em polipropileno. Por isso
   o card da linha plástica é o único do portfólio que segue com foto gerada. Se o
