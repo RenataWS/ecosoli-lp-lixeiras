@@ -93,6 +93,10 @@ a { text-decoration:none; color:inherit; }
 .btn--amarelo:hover { background:#FFC750; }
 .btn--claro { background:#fff; color:var(--green-700); border-color:var(--line); }
 .btn--claro:hover { border-color:var(--green); color:var(--green-700); }
+/* secundário do hero: fica sobre a foto, então é translúcido em vez de sólido —
+   não disputa peso com o CTA amarelo de orçamento. */
+.btn--vidro { background:rgba(255,255,255,.14); color:#fff; border-color:rgba(255,255,255,.55); backdrop-filter:blur(6px); }
+.btn--vidro:hover { background:rgba(255,255,255,.24); border-color:#fff; }
 .btn--linha {
   background:var(--green); color:#fff; border-color:var(--green);
   padding:13px 14px; font-size:12.5px; margin-top:auto;
@@ -132,6 +136,9 @@ a { text-decoration:none; color:inherit; }
 }
 .hero > .env { width:100%; }
 .hero-photo { position:absolute; inset:0; z-index:0; overflow:hidden; }
+/* a versão em pé da foto entra no celular, onde o recorte do cover deixaria
+   só um terço da largura da versão deitada — e cortaria duas das quatro cores */
+.hero-photo picture { display:block; width:100%; height:100%; }
 .hero-photo img { width:100%; height:100%; object-fit:cover; object-position:82% 52%; }
 .hero-veil {
   position:absolute; inset:0; z-index:1;
@@ -204,6 +211,31 @@ a { text-decoration:none; color:inherit; }
 @media (max-width:559px) {
   .card { flex-direction:column; }
   .card-media { flex:none; min-height:0; aspect-ratio:16/10; }
+}
+
+/* ── faixa do catálogo ── */
+.catalogo {
+  margin-top:26px; display:flex; flex-wrap:wrap; align-items:center;
+  gap:20px clamp(22px,3vw,32px); padding:clamp(24px,3vw,34px);
+  border-radius:var(--raio); color:#fff; box-shadow:var(--sombra-alta);
+  background:linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 100%);
+}
+.catalogo-icone {
+  flex:none; width:58px; height:58px; border-radius:15px; color:var(--yellow);
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.26);
+}
+.catalogo-texto { flex:1 1 340px; display:flex; flex-direction:column; gap:8px; }
+.catalogo-texto h3 { font-size:clamp(20px,2.4vw,25px); line-height:1.25; }
+.catalogo-texto p { font-size:15px; color:rgba(255,255,255,.86); max-width:64ch; }
+.catalogo .btn { flex:none; }
+.catalogo-nota { flex-basis:100%; font-size:13px; color:rgba(255,255,255,.6); }
+@media (max-width:559px) {
+  .catalogo { flex-direction:column; align-items:flex-start; }
+  /* em coluna, o flex-grow do texto passa a esticar na vertical e abre um vão
+     antes do botão — aqui a altura tem que ser a do conteúdo. */
+  .catalogo-texto { flex:0 0 auto; }
+  .catalogo .btn { width:100%; }
 }
 
 /* ── ESG ── */
@@ -408,7 +440,10 @@ a { text-decoration:none; color:inherit; }
 
 <section class="hero">
   <div class="hero-photo">
-    <img src="{{ASSET:hero_bg}}" alt="Quatro lixeiras de aço inox com faixas azul, vermelha, verde e amarela do padrão CONAMA no lobby de um edifício corporativo" fetchpriority="high">
+    <picture>
+      <source media="(max-width:699px)" srcset="{{ASSET:hero_bg_mobile}}">
+      <img src="{{ASSET:hero_bg}}" alt="Quatro lixeiras de aço inox para coleta seletiva, com cúpulas azul (papel), vermelha (plástico), verde (vidro) e amarela (metal) do padrão CONAMA 275" fetchpriority="high">
+    </picture>
   </div>
   <div class="hero-veil" aria-hidden="true"></div>
   <div class="env">
@@ -421,6 +456,8 @@ a { text-decoration:none; color:inherit; }
       <div class="actions">
         <a class="btn btn--amarelo" href="https://wa.me/5519920033125?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20lixeiras%20para%20coleta%20seletiva%20com%20faturamento%20para%20CNPJ." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>SOLICITAR ORÇAMENTO PARA EMPRESA</span></a>
+        <a class="btn btn--vidro" href="/lixeiras/catalogo-lixeiras-ecosoli.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M20 21H4"/></svg><span>VER CATÁLOGO (PDF)</span></a>
       </div>
       <div class="hero-provas"><span class="prova">+13 Anos de Experiência</span><span class="prova">Faturamento Facilitado para CNPJ</span><span class="prova">Pronta Entrega para Vinhedo, Valinhos e Região</span></div>
     </div>
@@ -436,19 +473,19 @@ a { text-decoration:none; color:inherit; }
     </div>
     <div class="amb-grade">
         <figure class="amb rv">
-          <img src="{{ASSET:opt_amb_escritorio}}" alt="Estação de coleta seletiva em aço inox com faixas azul, verde e vermelha em escritório corporativo de planta aberta" loading="lazy">
+          <img src="{{ASSET:opt_amb_escritorio}}" alt="Três lixeiras de coleta seletiva com tampa azul (papel), vermelha (plástico) e verde (vidro) em escritório corporativo de planta aberta" loading="lazy">
           <figcaption>Escritórios corporativos</figcaption>
         </figure>
         <figure class="amb rv">
-          <img src="{{ASSET:opt_amb_hotel}}" alt="Par de lixeiras de aço inox com faixas azul e amarela no corredor de um hotel de alto padrão" loading="lazy">
+          <img src="{{ASSET:opt_amb_hotel}}" alt="Par de lixeiras de aço inox com cúpula azul (papel) e amarela (metal) no corredor de um hotel de alto padrão" loading="lazy">
           <figcaption>Hotéis e recepções</figcaption>
         </figure>
         <figure class="amb rv">
-          <img src="{{ASSET:opt_amb_clinica}}" alt="Lixeira de aço inox com pedal e faixa verde no corredor de uma clínica médica" loading="lazy">
+          <img src="{{ASSET:opt_amb_clinica}}" alt="Lixeira de aço inox com pedal e tampa verde para vidro, no corredor de uma clínica" loading="lazy">
           <figcaption>Clínicas e hospitais</figcaption>
         </figure>
         <figure class="amb rv">
-          <img src="{{ASSET:opt_amb_condominio}}" alt="Quatro lixeiras de aço inox com faixas azul, vermelha, verde e amarela na área comum de um condomínio residencial" loading="lazy">
+          <img src="{{ASSET:opt_amb_condominio}}" alt="Quatro lixeiras de aço inox com cúpulas azul, vermelha, verde e amarela na área comum de um condomínio residencial" loading="lazy">
           <figcaption>Condomínios e prédios</figcaption>
         </figure></div>
   </div>
@@ -462,7 +499,7 @@ a { text-decoration:none; color:inherit; }
     </div>
     <div class="grade-cards">
         <article class="card rv">
-          <div class="card-media"><img src="{{ASSET:opt_p_inox}}" alt="Duas lixeiras de aço inox com tampa basculante e faixas azul e verde ao lado do balcão de mármore da recepção de um hotel" loading="lazy"></div>
+          <div class="card-media"><img src="{{ASSET:opt_p_inox}}" alt="Três lixeiras de aço inox da Ecosoli: meia-lua de encostar na parede, quadrada com tampa basculante e cesto redondo com tampa abaulada" loading="lazy"></div>
           <div class="card-corpo">
             <h3>Lixeiras em Aço Inox</h3>
             <p class="card-destaque card-destaque--premium">Destaque Premium, Higiene e Design</p>
@@ -472,7 +509,7 @@ a { text-decoration:none; color:inherit; }
           </div>
         </article>
         <article class="card rv">
-          <div class="card-media"><img src="{{ASSET:opt_p_pilhas}}" alt="Coletor de pilhas e baterias em aço inox com visor transparente no hall de elevadores de um edifício corporativo" loading="lazy"></div>
+          <div class="card-media"><img src="{{ASSET:opt_p_pilhas}}" alt="Coletores de pilhas e baterias em aço inox, nos formatos quadrado e cilíndrico, com tampa laranja e identificação do resíduo" loading="lazy"></div>
           <div class="card-corpo">
             <h3>Coletores para Baterias, Pilhas e Lixo Eletrônico</h3>
             <p class="card-destaque card-destaque--esg">Adesão ESG</p>
@@ -482,7 +519,7 @@ a { text-decoration:none; color:inherit; }
           </div>
         </article>
         <article class="card rv">
-          <div class="card-media"><img src="{{ASSET:opt_p_urbana}}" alt="Lixeira urbana de aço galvanizado com tampa curva instalada em praça pública" loading="lazy"></div>
+          <div class="card-media"><img src="{{ASSET:opt_p_urbana}}" alt="Lixeira urbana de aço inox sobre pés e conjunto duplo de coletores com pedestal, para áreas externas" loading="lazy"></div>
           <div class="card-corpo">
             <h3>Lixeiras Urbanas e de Grande Volume</h3>
             <p class="card-destaque card-destaque--urbana">Áreas Abertas</p>
@@ -501,6 +538,18 @@ a { text-decoration:none; color:inherit; }
               <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3Z"/></svg><span>VER LINHA PLÁSTICA</span></a>
           </div>
         </article></div>
+    <div class="catalogo rv">
+      <div class="catalogo-icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h4"/></svg>
+      </div>
+      <div class="catalogo-texto">
+        <h3>Catálogo completo, com código, dimensão e litragem</h3>
+        <p>19 páginas com a especificação de cada modelo: aço inox liso, aro colorido, tampa basculante, quadrada com pedal, meia lua, meia lua de parede, conjuntos com suporte, coletores de pilhas e baterias, bituqueira e linha industrial urbana. É o documento que a área de compras precisa para montar a requisição.</p>
+      </div>
+      <a class="btn btn--amarelo" href="/lixeiras/catalogo-lixeiras-ecosoli.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M20 21H4"/></svg><span>BAIXAR CATÁLOGO (PDF)</span></a>
+      <p class="catalogo-nota">PDF · 3,1 MB · 19 páginas · abre em uma nova aba</p>
+    </div>
   </div>
 </section>
 
