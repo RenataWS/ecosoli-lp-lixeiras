@@ -129,8 +129,8 @@ Corrigir só com validação do cliente.
 mensagem de abertura própria que identifica de qual bloco da página o contato
 veio — inclusive os `[VER LINHA ...]` de cada card de produto, que no briefing
 apontariam para o catálogo. Não há formulário e o único link que tira o
-visitante da página é o download do catálogo. O número fica na constante `WA`, e
-é o mesmo publicado na LP de filtros e cisternas: `5519920033125`.
+visitante da página é o download do catálogo. O número fica na constante `WA`:
+`5519920032135`.
 
 **O catálogo em PDF tem duas entradas, e nenhuma delas substitui um CTA.** Um
 botão secundário translúcido (`.btn--vidro`) ao lado do CTA amarelo do hero, e a
